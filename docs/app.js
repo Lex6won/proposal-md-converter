@@ -70,6 +70,12 @@ async function convertSelectedFile() {
       markdown = await convertImage(selectedFile);
     } else if (['txt', 'md'].includes(ext)) {
       markdown = await selectedFile.text();
+    } else if (['ppt', 'pptx', 'hwp', 'hwpx'].includes(ext)) {
+      throw new Error(
+        '이 파일은 풀버전에서 변환해야 합니다.\n' +
+        '브라우저 웹판은 서버가 없어 PPTX/HWPX 파서와 고성능 OCR을 실행할 수 없습니다.\n' +
+        '오른쪽 위의 "풀버전 다운로드"를 사용해 주세요.'
+      );
     } else {
       throw new Error('지원하지 않는 파일 형식입니다.');
     }
