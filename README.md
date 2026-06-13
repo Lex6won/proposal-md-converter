@@ -72,6 +72,15 @@ converter: "officeparser v7.0.3 + OCR(eng+kor)"
 5. `개인정보 자동 마스킹`은 기본으로 켜져 있습니다.
 6. 변환 후 Markdown을 다운로드하거나 복사합니다.
 
+## 공개 URL과 풀버전
+
+- 웹판: https://lex6won.github.io/proposal-md-converter/
+- 풀버전 다운로드: https://github.com/Lex6won/proposal-md-converter/releases/latest
+
+GitHub Pages 웹판은 브라우저에서 바로 실행되므로 PDF, 스캔 PDF, 이미지, TXT/MD 중심으로 제공합니다.
+HWPX/HWP/PDF/PPTX 전체 변환과 PPTX 이미지 OCR은 풀버전 ZIP을 다운로드한 뒤 `실행.bat`로 실행하는 방식이 성능과 안정성이 가장 좋습니다.
+구형 `.ppt` 파일은 먼저 PowerPoint에서 `.pptx`로 저장한 뒤 변환하세요.
+
 ## 개발 실행
 
 ```powershell
