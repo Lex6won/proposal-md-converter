@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제안서 MD 변환 도구 설치 가이드</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Malgun Gothic", "Apple SD Gothic Neo", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #202124;
+    background: #f6f4ef;
+  }
+  header {
+    background: #174c3a;
+    color: #fff;
+    padding: 34px 20px 28px;
+  }
+  .inner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 27px;
+    line-height: 1.3;
+  }
+  .lead {
+    margin: 0;
+    color: rgba(255,255,255,.82);
+  }
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 22px 16px 52px;
+  }
+  .box {
+    background: #fff;
+    border: 1px solid #e0ddd6;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    overflow: hidden;
+  }
+  .box h2 {
+    margin: 0;
+    padding: 15px 18px;
+    font-size: 18px;
+    background: #faf9f6;
+    border-bottom: 1px solid #e0ddd6;
+  }
+  .body { padding: 18px; }
+  .steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+  }
+  .steps li {
+    position: relative;
+    margin: 0 0 12px;
+    padding: 12px 14px 12px 48px;
+    background: #f8faf8;
+    border: 1px solid #e4ebe6;
+    border-radius: 8px;
+  }
+  .steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 13px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2d7a56;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .warn, .tip {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: 6px;
+  }
+  .warn {
+    border-left: 4px solid #b91c1c;
+    background: #fdeeee;
+  }
+  .tip {
+    border-left: 4px solid #2d7a56;
+    background: #edf8f1;
+  }
+  code {
+    font-family: Consolas, "D2Coding", monospace;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: #eeeae3;
+  }
+  pre {
+    margin: 10px 0 0;
+    padding: 12px 14px;
+    overflow: auto;
+    background: #242822;
+    color: #f7f7f0;
+    border-radius: 8px;
+    font-family: Consolas, "D2Coding", monospace;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+  .simple {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .pill {
+    padding: 9px 10px;
+    border-radius: 999px;
+    text-align: center;
+    background: #e8f5ee;
+    color: #174c3a;
+    font-weight: 800;
+  }
+  details {
+    border-top: 1px solid #e0ddd6;
+  }
+  summary {
+    cursor: pointer;
+    padding: 13px 18px;
+    font-weight: 800;
+  }
+  details div {
+    padding: 0 18px 16px;
+  }
+  ul { margin: 8px 0 0; padding-left: 20px; }
+  li { margin: 4px 0; }
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #74746f;
+    font-size: 12px;
+  }
+  @media (max-width: 640px) {
+    h1 { font-size: 23px; }
+    .simple { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <h1>제안서 MD 변환 도구 설치 가이드</h1>
+      <p class="lead">설치만 차근차근 따라 하세요. 사용은 파일을 넣고 변환 버튼을 누르면 끝입니다.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="box">
+      <h2>1. ZIP 파일 압축 풀기</h2>
+      <div class="body">
+        <ol class="steps">
+          <li>전달받은 ZIP 파일을 PC에 저장합니다.</li>
+          <li>ZIP 파일을 마우스 오른쪽 버튼으로 클릭합니다.</li>
+          <li><strong>압축 풀기</strong>를 선택해 폴더로 풉니다.</li>
+        </ol>
+        <div class="warn">
+          ZIP 파일 안에서 <code>실행.bat</code>를 바로 실행하면 안 됩니다. 반드시 압축을 먼저 풀어 주세요.
+        </div>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>2. 폴더 위치 정하기</h2>
+      <div class="body">
+        <p>압축을 푼 <code>제안서 MD 변환</code> 폴더는 아래 위치 중 하나에 두는 것을 권장합니다.</p>
+        <pre>C:\Users\사용자명\Desktop\제안서 MD 변환
+C:\Users\사용자명\Documents\제안서 MD 변환
+C:\Tools\제안서 MD 변환</pre>
+        <div class="warn">
+          <code>C:\Program Files</code>, <code>C:\Windows</code>, 읽기 전용 USB, 네트워크 드라이브, 압축파일 내부는 피하세요.
+        </div>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>3. 실행하기</h2>
+      <div class="body">
+        <ol class="steps">
+          <li>압축을 푼 폴더를 엽니다.</li>
+          <li><code>실행.bat</code>를 더블클릭합니다.</li>
+          <li>브라우저가 열리면 준비 완료입니다.</li>
+        </ol>
+        <div class="tip">
+          브라우저가 자동으로 열리지 않으면 주소창에 <code>http://localhost:3000</code>을 입력하세요.
+        </div>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>4. 사용하기</h2>
+      <div class="body">
+        <ol class="steps">
+          <li>파일을 화면에 끌어다 놓거나 클릭해서 선택합니다.</li>
+          <li><code>변환 시작</code>을 누릅니다.</li>
+          <li>완료된 파일을 다운로드합니다.</li>
+        </ol>
+        <p>여러 파일을 한 번에 선택할 수 있고, 완료된 파일을 체크해서 <code>선택 다운로드</code>도 할 수 있습니다.</p>
+        <div class="simple">
+          <div class="pill">.hwpx</div>
+          <div class="pill">.hwp</div>
+          <div class="pill">.pdf</div>
+          <div class="pill">.pptx</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>5. 종료하기</h2>
+      <div class="body">
+        <p>브라우저만 닫으면 서버가 계속 실행 중일 수 있습니다.</p>
+        <p>완전히 종료하려면 작업표시줄의 <code>Proposal MD Converter - Server</code> 창을 닫아 주세요.</p>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>문제가 생기면</h2>
+      <details open>
+        <summary>브라우저가 안 열립니다</summary>
+        <div>
+          주소창에 <code>http://localhost:3000</code>을 직접 입력해 보세요.
+        </div>
+      </details>
+      <details>
+        <summary>변경사항이 반영되지 않습니다</summary>
+        <div>
+          기존 서버가 실행 중일 수 있습니다. 작업표시줄의 <code>Proposal MD Converter - Server</code> 창을 닫고 <code>실행.bat</code>를 다시 실행하세요.
+        </div>
+      </details>
+      <details>
+        <summary>실행 창이 바로 꺼집니다</summary>
+        <div>
+          폴더 위치 문제일 수 있습니다. <code>Desktop</code> 또는 <code>Documents</code>로 옮긴 뒤 다시 실행하세요.
+        </div>
+      </details>
+      <details>
+        <summary>node.exe 오류가 나옵니다</summary>
+        <div>
+          <code>runtime\node.exe</code>가 빠진 상태입니다. ZIP 파일을 다시 받아 전체 압축을 풀어 주세요.
+        </div>
+      </details>
+      <details>
+        <summary>여러 파일 다운로드가 막힙니다</summary>
+        <div>
+          브라우저가 자동 다운로드를 막은 것입니다. 주소창 근처의 다운로드 허용 안내를 확인해 주세요.
+        </div>
+      </details>
+    </section>
+
+    <section class="box">
+      <h2>공유할 때 확인할 것</h2>
+      <div class="body">
+        <p>다른 직원에게 줄 때는 <code>제안서 MD 변환</code> 폴더 전체를 ZIP으로 묶어 전달하세요.</p>
+        <ul>
+          <li><code>node_modules</code>, <code>runtime</code>, <code>tessdata</code>는 삭제하지 마세요.</li>
+          <li><code>uploads</code>, <code>output</code> 안의 기존 파일은 비워도 됩니다.</li>
+          <li>이 HTML 파일과 <code>사용법.md</code>도 함께 넣어 주세요.</li>
+        </ul>
+      </div>
+    </section>
+
+    <p class="footer">설치 후 실행 주소: <code>http://localhost:3000</code></p>
+  </main>
+</body>
+</html>
