@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>제안서 MD 변환</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="toolbar">
+      <div>
+        <h1>제안서 MD 변환</h1>
+        <p>PDF · 이미지 · 텍스트를 브라우저에서 Markdown으로 변환</p>
+      </div>
+      <div class="toggles">
+        <label><input id="ocrToggle" type="checkbox" checked> OCR</label>
+        <label><input id="maskToggle" type="checkbox" checked> 개인정보 마스킹</label>
+      </div>
+    </section>
+
+    <section id="dropzone" class="dropzone" tabindex="0">
+      <input id="fileInput" type="file" accept=".pdf,.txt,.md,.png,.jpg,.jpeg,.webp" hidden>
+      <div class="drop-title">파일 선택</div>
+      <div class="drop-meta">PDF, PNG, JPG, WEBP, TXT, MD</div>
+    </section>
+
+    <section class="workbench">
+      <div class="panel">
+        <div class="panel-head">
+          <strong id="fileName">대기 중</strong>
+          <span id="status">파일을 선택하세요</span>
+        </div>
+        <textarea id="output" spellcheck="false" placeholder="변환 결과가 여기에 표시됩니다."></textarea>
+      </div>
+      <aside class="actions">
+        <button id="convertBtn" type="button" disabled>변환</button>
+        <button id="copyBtn" type="button" disabled>복사</button>
+        <button id="downloadBtn" type="button" disabled>다운로드</button>
+        <div id="progress" class="progress"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
