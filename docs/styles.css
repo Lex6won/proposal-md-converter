@@ -32,6 +32,19 @@ p {
   gap: 10px;
   flex-wrap: wrap;
 }
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background: #0f766e;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
 .toggles label {
   display: inline-flex;
   align-items: center;
@@ -45,6 +58,42 @@ p {
   font-weight: 700;
 }
 input[type="checkbox"] { accent-color: #0f766e; }
+.mode-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.mode {
+  min-height: 72px;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #1f2933;
+  text-decoration: none;
+}
+.mode strong,
+.mode span {
+  display: block;
+}
+.mode strong {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.mode span {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.mode-primary {
+  border-color: #0f766e;
+  box-shadow: inset 4px 0 0 #0f766e;
+}
+.mode-download {
+  border-color: #2563eb;
+  box-shadow: inset 4px 0 0 #2563eb;
+}
 .dropzone {
   display: grid;
   place-items: center;
@@ -149,6 +198,7 @@ button:disabled {
 }
 @media (max-width: 760px) {
   .toolbar { align-items: stretch; flex-direction: column; }
+  .mode-grid { grid-template-columns: 1fr; }
   .workbench { grid-template-columns: 1fr; }
   .actions { flex-direction: row; flex-wrap: wrap; }
   .actions button { flex: 1 1 120px; }
