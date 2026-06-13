@@ -11,18 +11,30 @@
     <section class="toolbar">
       <div>
         <h1>제안서 MD 변환</h1>
-        <p>PDF · 이미지 · 텍스트를 브라우저에서 Markdown으로 변환</p>
+        <p>웹판은 PDF·이미지 중심, 풀버전은 HWPX·HWP·PDF·PPTX 변환</p>
       </div>
       <div class="toggles">
+        <a class="download-link" href="https://github.com/Lex6won/proposal-md-converter/releases/latest">풀버전 다운로드</a>
         <label><input id="ocrToggle" type="checkbox" checked> OCR</label>
         <label><input id="maskToggle" type="checkbox" checked> 개인정보 마스킹</label>
       </div>
     </section>
 
+    <section class="mode-grid">
+      <div class="mode mode-primary">
+        <strong>웹판</strong>
+        <span>PDF, 스캔 PDF, 이미지, TXT/MD</span>
+      </div>
+      <a class="mode mode-download" href="https://github.com/Lex6won/proposal-md-converter/releases/latest">
+        <strong>풀버전</strong>
+        <span>HWPX, HWP, PDF, PPTX 변환은 다운로드 실행 권장</span>
+      </a>
+    </section>
+
     <section id="dropzone" class="dropzone" tabindex="0">
-      <input id="fileInput" type="file" accept=".pdf,.txt,.md,.png,.jpg,.jpeg,.webp" hidden>
+      <input id="fileInput" type="file" accept=".pdf,.txt,.md,.png,.jpg,.jpeg,.webp,.ppt,.pptx,.hwp,.hwpx" hidden>
       <div class="drop-title">파일 선택</div>
-      <div class="drop-meta">PDF, PNG, JPG, WEBP, TXT, MD</div>
+      <div class="drop-meta">웹판: PDF, PNG, JPG, WEBP, TXT, MD · PPTX/HWP는 풀버전</div>
     </section>
 
     <section class="workbench">
