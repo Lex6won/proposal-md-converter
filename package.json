@@ -1,0 +1,24 @@
+{
+  "name": "proposal-md-converter",
+  "version": "1.0.0",
+  "description": "제안서 평가용 Markdown 변환 도구 - HWPX/HWP/PDF/PPTX to MD",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "echo \"No build step required. Run: npm start\""
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.100",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "kordoc": "^2.7.1",
+    "pdfjs-dist": "^4.10.38",
+    "officeparser": "^7.0.3",
+    "tesseract.js": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
