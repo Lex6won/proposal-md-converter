@@ -25,6 +25,8 @@ HWPX, HWP, PDF, PPTX 문서를 Markdown으로 바꾸고, 스캔 PDF와 이미지
 | 풀버전 ZIP 바로 받기 | https://github.com/Lex6won/proposal-md-converter/releases/latest/download/proposal-md-converter-full-windows-v1.0.0-lite.zip |
 | 소스 코드 보기 | https://github.com/Lex6won/proposal-md-converter |
 
+> **중요:** 풀버전은 ZIP을 받은 뒤 `실행.bat`를 먼저 실행해야 사용할 수 있습니다. `실행.bat`를 실행하기 전에는 `http://localhost:3000`에 접속해도 열리지 않습니다.
+
 ---
 
 ## 목차
@@ -63,6 +65,8 @@ HWPX, HWP, PPTX까지 변환하려면 풀버전을 사용하세요.
 3. 압축 해제한 폴더에서 `실행.bat`를 더블클릭합니다.
 4. 브라우저가 `http://localhost:3000`으로 열리면 파일을 업로드합니다.
 5. 변환 결과를 다운로드하거나 복사합니다.
+
+> `실행.bat`가 로컬 변환 서버를 켜는 시작 버튼입니다. ZIP을 받거나 압축을 푼 것만으로는 서버가 실행되지 않습니다.
 
 ---
 
@@ -139,17 +143,18 @@ https://github.com/Lex6won/proposal-md-converter/releases/latest/download/propos
 
 1. ZIP 파일을 다운로드합니다.
 2. 압축을 해제합니다.
-3. `실행.bat`를 더블클릭합니다.
+3. 압축 해제한 폴더 안에서 `실행.bat`를 더블클릭합니다.
 4. 브라우저가 자동으로 열리지 않으면 주소창에 아래 주소를 입력합니다.
 
 ```text
 http://localhost:3000
 ```
 
-5. 파일을 끌어다 놓거나 클릭해서 선택합니다.
-6. PDF/PPTX는 `이미지 OCR 사용` 옵션을 필요에 따라 켭니다.
-7. `개인정보 자동 마스킹` 옵션을 확인합니다.
-8. 변환 후 Markdown을 다운로드하거나 복사합니다.
+5. 단, 위 주소는 `실행.bat` 실행 후에만 열립니다.
+6. 파일을 끌어다 놓거나 클릭해서 선택합니다.
+7. PDF/PPTX는 `이미지 OCR 사용` 옵션을 필요에 따라 켭니다.
+8. `개인정보 자동 마스킹` 옵션을 확인합니다.
+9. 변환 후 Markdown을 다운로드하거나 복사합니다.
 
 ---
 
@@ -251,11 +256,13 @@ Windows 보안 경고가 표시될 수 있습니다. ZIP 파일을 압축 해제
 
 ### 브라우저가 자동으로 열리지 않습니다
 
-주소창에 직접 입력하세요.
+먼저 `실행.bat`가 실행 중인지 확인한 뒤, 주소창에 직접 입력하세요.
 
 ```text
 http://localhost:3000
 ```
+
+`실행.bat`를 실행하지 않은 상태에서는 이 주소가 열리지 않습니다.
 
 ### PPT 파일에서 오류가 납니다
 
