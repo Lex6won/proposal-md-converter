@@ -2,6 +2,7 @@ node_modules/
 uploads/
 output/
 runtime/
+dist/
 .env
 *.log
 *.tmp
